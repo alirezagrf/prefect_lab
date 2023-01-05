@@ -39,6 +39,6 @@ jobs:
         prefect deployment build ./basicflow.py:basic_flow \
         --name "Demo basic flow" \
         -sb github/github \
-        -wq githubwq \
+        -q githubwq \
         -v $GITHUB_SHA \
         --apply
