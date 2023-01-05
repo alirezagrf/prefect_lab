@@ -6,7 +6,7 @@ from prefect.filesystems import S3
 @flow
 def hello_upload_flow():
 
-    s3_block = S3.load("demo-bucket")
+    s3_block = S3.load("s3-bucket")
 
     aws_credentials = AwsCredentials(
         aws_access_key_id=s3_block.aws_access_key_id.get_secret_value(),
