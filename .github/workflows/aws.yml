@@ -36,7 +36,7 @@ jobs:
 
     - name: Build and apply deployment
       run: |
-        prefect deployment build ./aws_flow.py:basic_flow \
+        prefect deployment build ./aws_flow.py:hello_upload_flow \
         --name "Demo aws flow" \
         -sb github/github \
         -q githubwq \
