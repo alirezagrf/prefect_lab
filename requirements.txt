@@ -1,1 +1,2 @@
 Prefect >= 2.*
+prefect_aws >= 0.2.3
