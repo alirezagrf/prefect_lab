@@ -11,7 +11,7 @@ s3_bucket = S3(
                                         aws_access_key_id=os.getenv('aws_access_key_id'),
                                         aws_secret_access_key=os.getenv('aws_secret_access_key'))
     )
-S3.save(name='s3-bucket', overwrite=True)
+s3_bucket.save(name='s3-bucket', overwrite=True)
 
 github_storage = GitHub(reference='main',repository=os.getenv('GITHUB_REPOSITORY'))
 github_storage.save(name='github',overwrite=True)
