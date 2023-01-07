@@ -20,7 +20,9 @@
 import os
 from prefect.blocks.system import Secret,String
 
-Secret(value=os.getenv('cme_api_password'.upper())).save(name="cme-api-password",overwrite=True)
+cme_api_password = Secret(value=os.getenv('cme_api_password'.upper()))
+cme_api_password.save(name="cme-api-password",overwrite=True)
+
 # Secret(value=os.getenv('curves-api-token')).save(name="curves-api-token",overwrite=True)
 # Secret(value=os.getenv('db-password')).save(name="db-password",overwrite=True)
 # Secret(value=os.getenv('eex-api-password')).save(name="eex-api-password",overwrite=True)
@@ -37,8 +39,12 @@ Secret(value=os.getenv('cme_api_password'.upper())).save(name="cme-api-password"
 # Secret(value=os.getenv('supabase-db-reference-id')).save(name="supabase-db-reference-id",overwrite=True)
 # Secret(value=os.getenv('greenfact-client-id')).save(name="greenfact-client-id",overwrite=True)
 
-String(value='dataflowopstest').save(name="dataflowopstest",overwrite=True)
-String(value='flavio@greenfact.com').save(name="greenfact-portal-user",overwrite=True)
-String(value='PR').save(name="pr-deployment-name",overwrite=True)
+dataflowopstest = String(value='dataflowopstest')
+dataflowopstest.save(name="dataflowopstest",overwrite=True)
+
+s2 = String(value='flavio@greenfact.com')
+s2.save(name="greenfact-portal-user",overwrite=True)
+s3 = String(value='PR')
+s3.save(name="pr-deployment-name",overwrite=True)
 
 
