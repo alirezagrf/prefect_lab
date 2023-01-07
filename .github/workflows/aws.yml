@@ -39,8 +39,8 @@ jobs:
     
     - name: Save Prefect blocks
       run: |
-        prefect block register -m prefect_aws
-        prefect block register -f blocks.py
+        prefect blocks register -m prefect_aws
+        prefect blocks register -f blocks.py
 
     - name: Build and apply deployment
       run: |
