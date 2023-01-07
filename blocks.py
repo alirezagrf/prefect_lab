@@ -5,7 +5,7 @@ import os
 from prefect.filesystems import GitHub
 
 s3_bucket = S3(
-        bucket_name='s3-bucket',
+        bucket_path='s3-bucket',
         basepath='rend-prefect-s3',
         aws_credentials=AwsCredentials(
                                         aws_access_key_id=os.getenv('aws_access_key_id'),
