@@ -11,6 +11,7 @@ env:
   PREFECT_API_URL : ${{ secrets.PREFECT_API_URL }}
   aws_access_key_id: ${{ secrets.aws_access_key_id}}
   aws_secret_access_key: ${{ secrets.aws_secret_access_key}}
+  CME_API_PASSWORD: ${{secrets.CME_API_PASSWORD}}
   
 permissions:
   contents: read
