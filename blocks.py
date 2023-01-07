@@ -1,4 +1,3 @@
-from prefect_aws.s3 import S3Bucket
 from prefect.filesystems import S3
 from prefect_aws import AwsCredentials
 import os
@@ -21,7 +20,7 @@ github_storage.save(name='github',overwrite=True)
 import os
 from prefect.blocks.system import Secret,String
 
-Secret(value=os.getenv('CME_API_PASSWORD')).save(name="cme-api-password",overwrite=True)
+Secret(value=os.getenv('cme_api_password')).save(name="cme-api-password",overwrite=True)
 # Secret(value=os.getenv('curves-api-token')).save(name="curves-api-token",overwrite=True)
 # Secret(value=os.getenv('db-password')).save(name="db-password",overwrite=True)
 # Secret(value=os.getenv('eex-api-password')).save(name="eex-api-password",overwrite=True)
