@@ -1,7 +1,7 @@
-from prefect.filesystems import S3
-from prefect_aws import AwsCredentials
-import os
-from prefect.filesystems import GitHub
+# from prefect.filesystems import S3
+# from prefect_aws import AwsCredentials
+# import os
+# from prefect.filesystems import GitHub
 
 # s3_bucket = S3(
 #         bucket_path='s3-bucket',
@@ -12,8 +12,8 @@ from prefect.filesystems import GitHub
 #     )
 # s3_bucket.save(name='s3-bucket', overwrite=True)
 
-github_storage = GitHub(reference='main',repository=os.getenv('GITHUB_REPOSITORY'))
-github_storage.save(name='github',overwrite=True)
+# github_storage = GitHub(reference='main',repository=os.getenv('GITHUB_REPOSITORY'))
+# github_storage.save(name='github',overwrite=True)
 
 # define and update required blocks here
 
