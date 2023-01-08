@@ -41,11 +41,11 @@ jobs:
       run: |
         prefect blocks register -f blocks.py
 
-    - name: Build and apply deployment
-      run: |
-        prefect deployment build ./aws_flow.py:hello_upload_flow \
-        --name "Demo aws flow" \
-        -sb s3/s3-bucket \
-        -q githubwq \
-        -v $GITHUB_SHA \
-        --apply
+    # - name: Build and apply deployment
+    #   run: |
+    #     prefect deployment build ./aws_flow.py:hello_upload_flow \
+    #     --name "Demo aws flow" \
+    #     -sb s3/s3-bucket \
+    #     -q githubwq \
+    #     -v $GITHUB_SHA \
+    #     --apply
