@@ -39,7 +39,7 @@ jobs:
     
     - name: Save Prefect blocks
       run: |
-        prefect blocks register -f blocks.py
+        prefect blocks register -f block/blocks.py
 
     # - name: Build and apply deployment
     #   run: |
