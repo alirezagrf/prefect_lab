@@ -20,7 +20,7 @@
 import os
 from prefect.blocks.system import Secret, String
 
-cme_api_password = Secret(value=os.getenv('cme-api-password')).save(name="cme-api-password",overwrite=True)
+cme_api_password = Secret(value=os.getenv('CME_API_PASSWORD')).save(name="cme-api-password",overwrite=True)
 
 # Secret(value=os.getenv('curves-api-token')).save(name="curves-api-token",overwrite=True)
 # Secret(value=os.getenv('db-password')).save(name="db-password",overwrite=True)
