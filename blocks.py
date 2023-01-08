@@ -18,7 +18,7 @@
 # define and update required blocks here
 
 import os
-from prefect.blocks.system import Secret,String
+from prefect.blocks.system import Secret
 
 cme_api_password = Secret(value=os.getenv('CME_API_PASSWORD'))
 # cme_api_password.save(name="cme-api-password",overwrite=True)
